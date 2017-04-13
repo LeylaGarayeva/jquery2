@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  
+<meta charset="utf-8">
+</head>
+<body>
+
+<div class="main">
+    <div class="row">
+        <div class="col-md-4">
+             <select class="form-control bir" id="sel1" value="select name" >
+                <option>Select name</option>
+                <option value='2'>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+        <div class="col-md-4">
+            <select class="form-control iki" id="sel1" value="select name" disabled >
+                <option>Select make</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-4">
+            <select class="form-control uc" id="sel1" value="select name" disabled>
+                <option>Select color</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+        <div class="col-md-4">
+            <select class="form-control dord" id="sel1" value="select name" disabled>
+                <option>Select size</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<br>
+ <button type="button" class="btn btn-default">ADD</button>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function() {
+//    $("iki").prop('disabled', true);
+//    $("uc").prop('disabled', true);
+//    $("dord").prop('disabled', true);
+//    $("gs").prop('disabled', false);
+    $('.bir').change(function() {
+            $('.iki').removeAttr('disabled');    
+    });
+     $('.iki').change(function() {
+            $('.uc').removeAttr('disabled');
+
+                 
+    });
+     $('.uc').change(function() {
+            $('.dord').removeAttr('disabled');
+    });
+});
+
+
+  $('.iki').change(function() {
+            $('.iki').removeAttr('disabled');
+            
+        
+    });
+
+</script>
+</body>
+</html>
